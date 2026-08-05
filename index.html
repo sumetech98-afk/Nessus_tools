@@ -1,0 +1,773 @@
+<!-- ===== NESSUS ON KALI LINUX - CYBERSUME FULL SCREEN BLACK EDITION ===== -->
+<!-- Isko Blogger Post Editor mein HTML mode mein paste karein -->
+
+<style>
+    /* ===== FULL SCREEN WRAPPER ===== */
+    .cyber-post-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 30px 40px 50px !important;
+        background: #000000 !important;
+        color: #ffffff;
+        border-radius: 0 !important;
+        box-sizing: border-box;
+    }
+    
+    /* ===== RESPONSIVE FULL SCREEN MARGINS ===== */
+    @media (max-width: 1200px) {
+        .cyber-post-wrapper {
+            padding: 25px 35px 45px !important;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .cyber-post-wrapper {
+            padding: 22px 30px 40px !important;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .cyber-post-wrapper {
+            padding: 18px 22px 35px !important;
+        }
+    }
+    
+    @media (max-width: 600px) {
+        .cyber-post-wrapper {
+            padding: 15px 18px 30px !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .cyber-post-wrapper {
+            padding: 12px 14px 25px !important;
+        }
+    }
+    
+    /* ===== CONTENT MAX WIDTH ===== */
+    .cyber-content {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    
+    /* ===== POST HEADER ===== */
+    .post-header-cyber {
+        margin-bottom: 35px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid rgba(0, 255, 136, 0.08);
+        background: transparent;
+    }
+    
+    .post-badge {
+        display: inline-block;
+        padding: 6px 26px;
+        background: rgba(0, 255, 136, 0.08);
+        border: 1px solid #00ff88;
+        border-radius: 50px;
+        color: #00ff88;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+    }
+    
+    .post-title-cyber {
+        font-size: 38px;
+        font-weight: 900;
+        line-height: 1.15;
+        color: #ffffff !important;
+        margin: 12px 0 18px;
+        letter-spacing: -0.5px;
+    }
+    
+    .post-title-cyber strong {
+        color: #00ff88;
+    }
+    
+    @media (max-width: 992px) {
+        .post-title-cyber {
+            font-size: 30px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .post-title-cyber {
+            font-size: 24px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .post-title-cyber {
+            font-size: 20px;
+        }
+    }
+    
+    /* ===== FEATURED BOX ===== */
+    .featured-box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 35px;
+        background: #0a0a0a !important;
+        border: 1px solid rgba(0, 255, 136, 0.12);
+        border-radius: 18px;
+        padding: 32px 38px;
+        margin: 25px 0 38px;
+        justify-content: center;
+    }
+    
+    @media (max-width: 768px) {
+        .featured-box {
+            flex-direction: column;
+            text-align: center;
+            padding: 25px 22px;
+            gap: 22px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .featured-box {
+            padding: 20px 16px;
+        }
+    }
+    
+    .featured-image {
+        flex-shrink: 0;
+    }
+    
+    .featured-image img {
+        max-width: 220px;
+        height: auto;
+        border-radius: 14px;
+        border: 2px solid #00ff88;
+        transition: 0.3s;
+        background: #000000;
+    }
+    
+    @media (max-width: 768px) {
+        .featured-image img {
+            max-width: 180px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .featured-image img {
+            max-width: 150px;
+        }
+    }
+    
+    .featured-image img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 40px rgba(0, 255, 136, 0.15);
+    }
+    
+    .featured-cta {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .featured-cta p {
+        color: #b0b8c8 !important;
+        margin: 5px 0 12px !important;
+        font-size: 16px;
+    }
+    
+    .featured-cta .main-link {
+        display: inline-block;
+        padding: 15px 42px;
+        background: linear-gradient(135deg, #00ff88, #00cc77);
+        color: #000000 !important;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 16px;
+        text-decoration: none;
+        margin-top: 6px;
+        transition: all 0.3s ease;
+        letter-spacing: 0.5px;
+    }
+    
+    .featured-cta .main-link:hover {
+        transform: scale(1.04);
+        box-shadow: 0 0 35px rgba(0, 255, 136, 0.25);
+    }
+    
+    .featured-cta .small-note {
+        color: #6a7290 !important;
+        font-size: 13px;
+        margin-top: 12px !important;
+    }
+    
+    .price-tag {
+        display: inline-block;
+        padding: 4px 18px;
+        background: rgba(255, 204, 0, 0.1);
+        border: 1px solid #ffcc00;
+        border-radius: 50px;
+        color: #ffcc00;
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 8px;
+    }
+    
+    /* ===== HEADINGS ===== */
+    .cyber-post-wrapper h2 {
+        color: #ffffff !important;
+        font-size: 28px;
+        font-weight: 800;
+        margin-top: 40px;
+        margin-bottom: 18px;
+        border-left: 5px solid #00ff88;
+        padding-left: 20px;
+        line-height: 1.3;
+    }
+    
+    @media (max-width: 992px) {
+        .cyber-post-wrapper h2 {
+            font-size: 26px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .cyber-post-wrapper h2 {
+            font-size: 24px;
+            padding-left: 16px;
+            margin-top: 35px;
+            margin-bottom: 16px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .cyber-post-wrapper h2 {
+            font-size: 20px;
+            padding-left: 14px;
+            margin-top: 28px;
+            margin-bottom: 14px;
+        }
+    }
+    
+    .cyber-post-wrapper h3 {
+        color: #00ff88 !important;
+        font-size: 22px;
+        font-weight: 700;
+        margin: 30px 0 14px;
+    }
+    
+    .cyber-post-wrapper h4 {
+        color: #ffcc00 !important;
+        font-size: 19px;
+        font-weight: 700;
+        margin: 25px 0 12px;
+    }
+    
+    @media (max-width: 768px) {
+        .cyber-post-wrapper h3 {
+            font-size: 19px;
+        }
+        .cyber-post-wrapper h4 {
+            font-size: 17px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .cyber-post-wrapper h3 {
+            font-size: 17px;
+            margin-top: 24px;
+        }
+        .cyber-post-wrapper h4 {
+            font-size: 15px;
+        }
+    }
+    
+    /* ===== PARAGRAPHS ===== */
+    .cyber-post-wrapper p {
+        color: #b0b8c8 !important;
+        font-size: 17px;
+        line-height: 1.95;
+        margin: 16px 0 20px;
+    }
+    
+    .cyber-post-wrapper p strong {
+        color: #00ff88;
+    }
+    
+    @media (max-width: 768px) {
+        .cyber-post-wrapper p {
+            font-size: 16px;
+            line-height: 1.85;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .cyber-post-wrapper p {
+            font-size: 15px;
+            line-height: 1.8;
+            margin: 14px 0 16px;
+        }
+    }
+    
+    /* ===== LISTS ===== */
+    .cyber-post-wrapper ul,
+    .cyber-post-wrapper ol {
+        color: #b0b8c8 !important;
+        font-size: 17px;
+        line-height: 2.3;
+        padding-left: 0;
+        margin: 14px 0 22px;
+        list-style: none;
+    }
+    
+    .cyber-post-wrapper ul li,
+    .cyber-post-wrapper ol li {
+        color: #b0b8c8 !important;
+        margin-bottom: 4px;
+        padding-left: 28px;
+        position: relative;
+    }
+    
+    .cyber-post-wrapper ul li::before {
+        content: "▸";
+        color: #00ff88;
+        position: absolute;
+        left: 0;
+        font-weight: 700;
+        font-size: 18px;
+    }
+    
+    @media (max-width: 480px) {
+        .cyber-post-wrapper ul,
+        .cyber-post-wrapper ol {
+            font-size: 15px;
+            line-height: 2.1;
+        }
+        .cyber-post-wrapper ul li {
+            padding-left: 24px;
+        }
+    }
+    
+    /* ===== CODE BLOCKS ===== */
+    .code-block {
+        margin: 16px 0 24px;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #0a0a0a !important;
+        border: 1px solid rgba(0, 255, 136, 0.08);
+    }
+    
+    .code-header {
+        background: #0d0d0d !important;
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(0, 255, 136, 0.06);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .code-header span:first-child {
+        color: #00ff88 !important;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    
+    .code-header span:last-child {
+        color: #6a7290 !important;
+        font-size: 12px;
+    }
+    
+    .code-block pre {
+        background: #000000 !important;
+        padding: 22px 24px;
+        border-radius: 0;
+        overflow-x: auto;
+        margin: 0;
+        border: none;
+    }
+    
+    .code-block pre code {
+        color: #b0b8c8 !important;
+        font-family: 'Courier New', 'Consolas', monospace;
+        font-size: 14px;
+        line-height: 1.9;
+        background: transparent !important;
+        white-space: pre-wrap;
+        word-break: break-all;
+    }
+    
+    .code-block pre code .cmd {
+        color: #00ff88;
+    }
+    .code-block pre code .output {
+        color: #6a7290;
+    }
+    .code-block pre code .comment {
+        color: #6a7290;
+        font-style: italic;
+    }
+    
+    @media (max-width: 480px) {
+        .code-block pre {
+            padding: 16px 14px;
+        }
+        .code-block pre code {
+            font-size: 12.5px;
+            line-height: 1.8;
+        }
+        .code-header {
+            padding: 10px 14px;
+        }
+        .code-header span:first-child {
+            font-size: 12px;
+        }
+        .code-header span:last-child {
+            font-size: 11px;
+        }
+    }
+    
+    /* ===== INFO BOX ===== */
+    .info-box {
+        background: rgba(0, 217, 255, 0.05);
+        border-left: 5px solid #00d9ff;
+        padding: 18px 24px;
+        margin: 16px 0 22px;
+        border-radius: 0 10px 10px 0;
+    }
+    
+    .info-box p {
+        color: #00d9ff !important;
+        font-size: 15px;
+        margin: 0 !important;
+    }
+    
+    .warning-box {
+        background: rgba(255, 107, 107, 0.05);
+        border-left: 5px solid #ff6b6b;
+        padding: 18px 24px;
+        margin: 16px 0 22px;
+        border-radius: 0 10px 10px 0;
+    }
+    
+    .warning-box p {
+        color: #ff6b6b !important;
+        font-size: 15px;
+        margin: 0 !important;
+    }
+    
+    .success-box {
+        background: rgba(0, 255, 136, 0.05);
+        border-left: 5px solid #00ff88;
+        padding: 18px 24px;
+        margin: 16px 0 22px;
+        border-radius: 0 10px 10px 0;
+    }
+    
+    .success-box p {
+        color: #00ff88 !important;
+        font-size: 15px;
+        margin: 0 !important;
+    }
+    
+    @media (max-width: 480px) {
+        .info-box, .warning-box, .success-box {
+            padding: 14px 16px;
+        }
+        .info-box p, .warning-box p, .success-box p {
+            font-size: 13.5px;
+        }
+    }
+    
+    /* ===== HORIZONTAL RULE ===== */
+    .cyber-post-wrapper hr {
+        border: none;
+        border-top: 1px solid rgba(0, 255, 136, 0.06);
+        margin: 30px 0 32px;
+        background: transparent;
+        height: 1px;
+    }
+    
+    /* ===== SHARE SECTION ===== */
+    .share-section {
+        margin-top: 50px;
+        padding-top: 30px;
+        border-top: 1px solid rgba(0, 255, 136, 0.08);
+    }
+    
+    .share-section p {
+        color: #6a7290 !important;
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 16px !important;
+    }
+    
+    .share-buttons {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .share-buttons a {
+        padding: 12px 28px;
+        border: 1px solid rgba(0, 255, 136, 0.12);
+        border-radius: 10px;
+        color: #b0b8c8 !important;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+        transition: 0.3s;
+        background: transparent;
+    }
+    
+    .share-buttons a:hover {
+        border-color: #00ff88;
+        color: #00ff88 !important;
+        background: rgba(0, 255, 136, 0.04);
+        transform: translateY(-2px);
+    }
+    
+    @media (max-width: 480px) {
+        .share-buttons a {
+            padding: 10px 18px;
+            font-size: 13px;
+        }
+        .share-section {
+            margin-top: 35px;
+            padding-top: 22px;
+        }
+    }
+    
+    /* ===== BLOGGER OVERRIDES ===== */
+    .blog-posts {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    .post-body {
+        padding: 0 !important;
+        background: #000000 !important;
+    }
+    
+    .post-body-content {
+        background: #000000 !important;
+        padding: 0 !important;
+    }
+    
+    .post-outer {
+        background: #000000 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .post {
+        background: #000000 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    /* ===== INLINE CODE ===== */
+    .cyber-post-wrapper code:not(pre code) {
+        background: #0a0a0a;
+        padding: 2px 12px;
+        border-radius: 4px;
+        color: #00ff88;
+        border: 1px solid rgba(0, 255, 136, 0.08);
+        font-size: 14.5px;
+        font-family: 'Courier New', monospace;
+    }
+    
+    @media (max-width: 480px) {
+        .cyber-post-wrapper code:not(pre code) {
+            font-size: 13px;
+            padding: 1px 8px;
+        }
+    }
+    
+    /* ===== IMAGES ===== */
+    .cyber-post-wrapper img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        margin: 10px 0;
+        border: 1px solid rgba(0, 255, 136, 0.05);
+    }
+    
+    .separator {
+        clear: both;
+        text-align: center;
+    }
+    
+    /* ===== LINK STYLES ===== */
+    .cyber-post-wrapper a {
+        color: #00ff88;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+    
+    .cyber-post-wrapper a:hover {
+        color: #00d9ff;
+        text-decoration: underline;
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+    
+    .mt-10 {
+        margin-top: 10px;
+    }
+</style>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="cyber-post-wrapper">
+
+    <div class="cyber-content">
+
+        <!-- ===== POST HEADER ===== -->
+        <div class="post-header-cyber">
+            <div class="post-badge">🔍 Vulnerability Assessment</div>
+            <h1 class="post-title-cyber">Nessus on Kali Linux: <strong>A Comprehensive Vulnerability Scanner</strong></h1>
+        </div>
+
+        <!-- ===== INTRODUCTION ===== -->
+        <p>
+            Nessus is one of the most widely used vulnerability scanners in the cybersecurity community, developed by Tenable Network Security. Originally created by Renaud Deraison as an open-source project in 1998, it was commercialized in 2005 and has since become the go-to tool for network infrastructure vulnerability assessment, with over <strong>75,000 organizations worldwide</strong> relying on it.
+        </p>
+
+        <!-- ===== FEATURED IMAGE WITH AMAZON LINK ===== -->
+        <div class="featured-box">
+            <div class="featured-image">
+                <a href="https://www.amazon.com/dp/B0H7KFXL1G" target="_blank" rel="noopener">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgImxC-NEcTE8oIVR0POZt55Icf5FaBaYBwE07Iw0G2ecqm_XOAbcwrMU0Bh1GHP6pjie1EhMXutI7BP4hgmmB7K7RGAbrML7484M7ADFh9SGW518Nc-mNOJ9J_-njkRK3h9N_U8wfSC8gdLeHs34qrTAycWILTH2cHpoB6zysjAIrx1yezysNP-Cu1ddd4/s320/Nessus.png" 
+                         alt="Nessus on Kali Linux Book"/>
+                </a>
+               
+            </div>
+            <div class="featured-cta">
+                <p>📚 <strong style="color:#00ff88;">Get Your Copy Today!</strong></p>
+                <a class="main-link" href="https://www.amazon.com/dp/B0H7KFXL1G" target="_blank" rel="noopener">
+                    🛒 Buy Now on Amazon
+                </a>
+                
+                
+            </div>
+        </div>
+
+        <!-- ===== WHAT MAKES NESSUS POWERFUL ===== -->
+        <h3>🔧 What Makes Nessus Powerful</h3>
+        <p>
+            Nessus operates by scanning target systems to identify security weaknesses through a vast library of pre-built checks called <strong>plugins</strong>. These plugins can detect outdated software, misconfigurations, weak passwords, unauthorized access, and known vulnerabilities across operating systems, applications, and network devices. The tool provides detailed findings with severity ratings (<strong style="color:#ff6b6b;">Critical</strong>, <strong style="color:#ff6b6b;">High</strong>, <strong style="color:#ffcc00;">Medium</strong>, <strong style="color:#00d9ff;">Low</strong>, <strong style="color:#6a7290;">Info</strong>), CVSS scores, and specific remediation recommendations.
+        </p>
+
+        <hr/>
+
+        <!-- ===== INSTALLATION ===== -->
+        <h3>📥 Installation on Kali Linux</h3>
+        <p>
+            Since Kali doesn't come with Nessus pre-installed, you must download the appropriate Debian package from Tenable's website and install it using the <code>dpkg</code> command:
+        </p>
+
+        <div class="code-block">
+            <div class="code-header">
+                <span>💻 Terminal</span>
+                <span>Installation</span>
+            </div>
+            <pre><code><span class="cmd">sudo dpkg -i Nessus-10.8.5-ubuntu1604_amd64.deb</span></code></pre>
+        </div>
+
+        <p>
+            After installation, start the Nessus service:
+        </p>
+
+        <div class="code-block">
+            <div class="code-header">
+                <span>💻 Terminal</span>
+                <span>Start Service</span>
+            </div>
+            <pre><code><span class="cmd">sudo systemctl start nessusd.service</span></code></pre>
+        </div>
+
+        <div class="info-box">
+            <p>🌐 Then access the web interface at <strong>https://localhost:8834/</strong> to complete the setup, where you'll register with an activation code (available for free through Nessus Essentials) and create an administrator account.</p>
+        </div>
+
+        <hr/>
+
+        <!-- ===== REAL-WORLD SCANNING ===== -->
+        <h3>🎯 Real-World Scanning Example</h3>
+        <p>
+            A practical example of using Nessus on Kali involves scanning an intentionally vulnerable <strong>Metasploitable 2</strong> target.
+        </p>
+
+        <h4>Step 1: Create a Scan Policy</h4>
+        <p>
+            In the Nessus web interface, navigate to <strong>Policies → New Policy → Advanced Scan</strong>. Configure discovery settings to scan all ports (0-65535) on both TCP and UDP.
+        </p>
+
+        <div class="success-box">
+            <p>🔑 Add SSH credentials for authenticated scanning (username: msfadmin, password: msfadmin). This allows Nessus to inspect installed packages and configurations internally, producing significantly more detailed findings than an unauthenticated scan.</p>
+        </div>
+
+        <h4>Step 2: Launch the Scan</h4>
+        <p>
+            Create a new scan targeting your Metasploitable VM's IP address and launch it. A typical credentialed scan of Metasploitable 2 takes approximately <strong>6-10 minutes</strong> and can identify around <strong>63 vulnerabilities</strong>, including 6 critical and 4 high-severity issues.
+        </p>
+
+        <h4>Step 3: Analyze Results</h4>
+        <p>
+            The scan report reveals grouped vulnerabilities, such as <strong>"Windows / Apache Log4j (Multiple Issues)"</strong> related to Log4Shell (CVE-2021-44228), along with critical remote code execution vulnerabilities and medium-severity denial of service vectors.
+        </p>
+
+        <hr/>
+
+        <!-- ===== COMMAND-LINE OPERATIONS ===== -->
+        <h3>⌨️ Command-Line Operations</h3>
+        <p>
+            For automation and headless environments, Nessus provides the <code>nessuscli</code> tool. Key commands include:
+        </p>
+
+        <div class="code-block">
+            <div class="code-header">
+                <span>💻 Terminal</span>
+                <span>nessuscli Commands</span>
+            </div>
+            <pre><code><span class="comment"># Update plugins</span>
+<span class="cmd">sudo /opt/nessus/sbin/nessuscli update</span>
+
+<span class="comment"># Create a scan</span>
+<span class="cmd">sudo /opt/nessus/sbin/nessuscli scan new --name "Linux Scan" --policy "Basic Network Scan" --targets "192.168.1.10-20"</span>
+
+<span class="comment"># Export report</span>
+<span class="cmd">sudo /opt/nessus/sbin/nessuscli report export --id 1 --format pdf --file /tmp/report.pdf</span></code></pre>
+        </div>
+
+        <div class="info-box">
+            <p>🔗 Nessus can also integrate directly with Metasploit through its bridge plugin, allowing penetration testers to launch scans directly from msfconsole and feed results into exploitation workflows.</p>
+        </div>
+
+        <hr/>
+
+        <!-- ===== SHARE SECTION ===== -->
+        <div class="share-section">
+            <p>📤 Share this post with your network</p>
+            <div class="share-buttons">
+                <a href="#" onclick="window.open('https://twitter.com/intent/tweet?text=Nessus%20on%20Kali%20Linux%20-%20A%20Comprehensive%20Vulnerability%20Scanner!%20%23Nessus%20%23KaliLinux%20%23CyberSecurity%20%23VulnerabilityAssessment','_blank');return false;">
+                    🐦 Twitter
+                </a>
+                <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href),'_blank');return false;">
+                    📘 Facebook
+                </a>
+                <a href="#" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank');return false;">
+                    💼 LinkedIn
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
