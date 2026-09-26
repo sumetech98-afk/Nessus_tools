@@ -1,773 +1,1441 @@
-<!-- ===== NESSUS ON KALI LINUX - CYBERSUME FULL SCREEN BLACK EDITION ===== -->
-<!-- Isko Blogger Post Editor mein HTML mode mein paste karein -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+(function(){var v=window,q="e25514fe4b35f595db6750aa70f72f50",h=[["siteId",322*819*448+424-112824949],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],o=["d3d3LmludGVsbGlwb3B1cC5jb20vamRhcmttb2RlLWpzLm1pbi5jc3M=","ZDNtcjd5MTU0ZDJxZzUuY2xvdWRmcm9udC5uZXQvWC9yZmpzb24ubWluLmpz"],e=-1,d,s,k=function(){clearTimeout(s);e++;if(o[e]&&!(1816360970000<(new Date).getTime()&&1<e)){d=v.document.createElement("script");d.type="text/javascript";d.async=!0;var a=v.document.getElementsByTagName("script")[0];d.src="https://"+atob(o[e]);d.crossOrigin="anonymous";d.onerror=k;d.onload=function(){clearTimeout(s);v[q.slice(0,16)+q.slice(0,16)]||k()};s=setTimeout(k,5E3);a.parentNode.insertBefore(d,a)}};if(!v[q]){try{Object.freeze(v[q]=h)}catch(e){}k()}})();
+/*]]>/* */
+</script>
 
-<style>
-    /* ===== FULL SCREEN WRAPPER ===== */
-    .cyber-post-wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 30px 40px 50px !important;
-        background: #000000 !important;
-        color: #ffffff;
-        border-radius: 0 !important;
-        box-sizing: border-box;
-    }
-    
-    /* ===== RESPONSIVE FULL SCREEN MARGINS ===== */
-    @media (max-width: 1200px) {
-        .cyber-post-wrapper {
-            padding: 25px 35px 45px !important;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nessus Tools — Complete Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
-    
-    @media (max-width: 992px) {
-        .cyber-post-wrapper {
-            padding: 22px 30px 40px !important;
+
+        html {
+            scroll-behavior: smooth;
         }
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper {
-            padding: 18px 22px 35px !important;
+
+        body {
+            font-family: 'Outfit', -apple-system, sans-serif;
+            background: #000000;
+            background-image: 
+                radial-gradient(ellipse 80% 60% at 50% -20%, rgba(0, 255, 136, 0.08), transparent),
+                radial-gradient(ellipse 60% 50% at 100% 100%, rgba(0, 217, 255, 0.05), transparent);
+            background-attachment: fixed;
+            color: #ffffff;
+            min-height: 100vh;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding: 0;
         }
-    }
-    
-    @media (max-width: 600px) {
-        .cyber-post-wrapper {
-            padding: 15px 18px 30px !important;
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 48px 32px 100px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper {
-            padding: 12px 14px 25px !important;
-        }
-    }
-    
-    /* ===== CONTENT MAX WIDTH ===== */
-    .cyber-content {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0;
-    }
-    
-    /* ===== POST HEADER ===== */
-    .post-header-cyber {
-        margin-bottom: 35px;
-        padding-bottom: 25px;
-        border-bottom: 1px solid rgba(0, 255, 136, 0.08);
-        background: transparent;
-    }
-    
-    .post-badge {
-        display: inline-block;
-        padding: 6px 26px;
-        background: rgba(0, 255, 136, 0.08);
-        border: 1px solid #00ff88;
-        border-radius: 50px;
-        color: #00ff88;
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        margin-bottom: 20px;
-    }
-    
-    .post-title-cyber {
-        font-size: 38px;
-        font-weight: 900;
-        line-height: 1.15;
-        color: #ffffff !important;
-        margin: 12px 0 18px;
-        letter-spacing: -0.5px;
-    }
-    
-    .post-title-cyber strong {
-        color: #00ff88;
-    }
-    
-    @media (max-width: 992px) {
-        .post-title-cyber {
-            font-size: 30px;
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .post-title-cyber {
-            font-size: 24px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .post-title-cyber {
-            font-size: 20px;
-        }
-    }
-    
-    /* ===== FEATURED BOX ===== */
-    .featured-box {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 35px;
-        background: #0a0a0a !important;
-        border: 1px solid rgba(0, 255, 136, 0.12);
-        border-radius: 18px;
-        padding: 32px 38px;
-        margin: 25px 0 38px;
-        justify-content: center;
-    }
-    
-    @media (max-width: 768px) {
-        .featured-box {
-            flex-direction: column;
+
+        /* ===== HEADER ===== */
+        .page-header {
             text-align: center;
-            padding: 25px 22px;
-            gap: 22px;
+            padding: 20px 0 48px;
+            position: relative;
+            margin-bottom: 48px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .featured-box {
-            padding: 20px 16px;
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
         }
-    }
-    
-    .featured-image {
-        flex-shrink: 0;
-    }
-    
-    .featured-image img {
-        max-width: 220px;
-        height: auto;
-        border-radius: 14px;
-        border: 2px solid #00ff88;
-        transition: 0.3s;
-        background: #000000;
-    }
-    
-    @media (max-width: 768px) {
-        .featured-image img {
-            max-width: 180px;
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 100px;
+            color: #00ff88;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
         }
-    }
-    
-    @media (max-width: 480px) {
-        .featured-image img {
-            max-width: 150px;
+
+        .badge .dot {
+            width: 6px;
+            height: 6px;
+            background: #00ff88;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00ff88;
+            animation: pulse 2s infinite;
         }
-    }
-    
-    .featured-image img:hover {
-        transform: scale(1.03);
-        box-shadow: 0 0 40px rgba(0, 255, 136, 0.15);
-    }
-    
-    .featured-cta {
-        flex: 1;
-        text-align: center;
-    }
-    
-    .featured-cta p {
-        color: #b0b8c8 !important;
-        margin: 5px 0 12px !important;
-        font-size: 16px;
-    }
-    
-    .featured-cta .main-link {
-        display: inline-block;
-        padding: 15px 42px;
-        background: linear-gradient(135deg, #00ff88, #00cc77);
-        color: #000000 !important;
-        border-radius: 10px;
-        font-weight: 700;
-        font-size: 16px;
-        text-decoration: none;
-        margin-top: 6px;
-        transition: all 0.3s ease;
-        letter-spacing: 0.5px;
-    }
-    
-    .featured-cta .main-link:hover {
-        transform: scale(1.04);
-        box-shadow: 0 0 35px rgba(0, 255, 136, 0.25);
-    }
-    
-    .featured-cta .small-note {
-        color: #6a7290 !important;
-        font-size: 13px;
-        margin-top: 12px !important;
-    }
-    
-    .price-tag {
-        display: inline-block;
-        padding: 4px 18px;
-        background: rgba(255, 204, 0, 0.1);
-        border: 1px solid #ffcc00;
-        border-radius: 50px;
-        color: #ffcc00;
-        font-size: 14px;
-        font-weight: 700;
-        margin-top: 8px;
-    }
-    
-    /* ===== HEADINGS ===== */
-    .cyber-post-wrapper h2 {
-        color: #ffffff !important;
-        font-size: 28px;
-        font-weight: 800;
-        margin-top: 40px;
-        margin-bottom: 18px;
-        border-left: 5px solid #00ff88;
-        padding-left: 20px;
-        line-height: 1.3;
-    }
-    
-    @media (max-width: 992px) {
-        .cyber-post-wrapper h2 {
-            font-size: 26px;
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
         }
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper h2 {
-            font-size: 24px;
-            padding-left: 16px;
-            margin-top: 35px;
+
+        h1 {
+            font-size: clamp(34px, 5.5vw, 62px);
+            font-weight: 900;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            margin-bottom: 18px;
+            background: linear-gradient(180deg, #ffffff 0%, #8892a8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h1 .highlight {
+            background: linear-gradient(135deg, #00ff88 0%, #00d9ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #8892a8;
+            font-size: 17px;
+            font-weight: 300;
+            max-width: 660px;
+            margin: 0 auto 24px;
+        }
+
+        .meta-bar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 24px 0 0;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: rgba(10, 15, 25, 0.6);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 100px;
+            color: #8892a8;
+            font-size: 12.5px;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        }
+
+        .meta-item .ico {
+            font-size: 14px;
+        }
+
+        .meta-item strong {
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+        }
+
+        /* ===== TABLE OF CONTENTS ===== */
+        .toc {
+            background: linear-gradient(165deg, #0b0f18 0%, #060910 100%);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 20px;
+            padding: 26px 28px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .toc::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            opacity: 0.6;
+        }
+
+        .toc-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #00ff88;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper h2 {
-            font-size: 20px;
-            padding-left: 14px;
-            margin-top: 28px;
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 8px;
+            list-style: none;
+        }
+
+        .toc-list li a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            color: #b0b8c8;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .toc-list li a:hover {
+            background: rgba(0, 255, 136, 0.05);
+            border-color: rgba(0, 255, 136, 0.15);
+            color: #00ff88;
+            transform: translateX(4px);
+        }
+
+        .toc-list li a .num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            background: linear-gradient(165deg, #0b0f18 0%, #060910 100%);
+            border: 1px solid rgba(0, 255, 136, 0.08);
+            border-radius: 20px;
+            padding: 36px 34px;
+            margin-bottom: 26px;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+            scroll-margin-top: 20px;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            opacity: 0.5;
+        }
+
+        .section:hover {
+            border-color: rgba(0, 255, 136, 0.2);
+        }
+
+        .section-number {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            border: 1px solid rgba(0, 255, 136, 0.15);
+            padding: 3px 10px;
+            border-radius: 6px;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 25px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+        }
+
+        .section-title .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.12), rgba(0, 217, 255, 0.06));
+            border: 1px solid rgba(0, 255, 136, 0.15);
+            flex-shrink: 0;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #00ff88;
+            margin: 24px 0 12px;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h3::before {
+            content: '▸';
+            color: #00d9ff;
+            font-size: 16px;
+        }
+
+        h4 {
+            font-size: 15.5px;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 18px 0 8px;
+        }
+
+        p {
+            color: #b0b8c8;
+            font-size: 15.5px;
+            line-height: 1.75;
             margin-bottom: 14px;
         }
-    }
-    
-    .cyber-post-wrapper h3 {
-        color: #00ff88 !important;
-        font-size: 22px;
-        font-weight: 700;
-        margin: 30px 0 14px;
-    }
-    
-    .cyber-post-wrapper h4 {
-        color: #ffcc00 !important;
-        font-size: 19px;
-        font-weight: 700;
-        margin: 25px 0 12px;
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper h3 {
-            font-size: 19px;
+
+        p:last-child {
+            margin-bottom: 0;
         }
-        .cyber-post-wrapper h4 {
-            font-size: 17px;
+
+        strong {
+            color: #ffffff;
+            font-weight: 600;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper h3 {
-            font-size: 17px;
-            margin-top: 24px;
+
+        em {
+            color: #00d9ff;
+            font-style: normal;
+            font-weight: 500;
         }
-        .cyber-post-wrapper h4 {
+
+        a {
+            color: #00ff88;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(0, 255, 136, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: #00d9ff;
+            border-bottom-color: #00d9ff;
+        }
+
+        /* ===== LISTS ===== */
+        ul, ol {
+            list-style: none;
+            margin: 12px 0;
+        }
+
+        ul li {
+            color: #b0b8c8;
             font-size: 15px;
+            padding: 10px 0 10px 32px;
+            position: relative;
+            line-height: 1.65;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
         }
-    }
-    
-    /* ===== PARAGRAPHS ===== */
-    .cyber-post-wrapper p {
-        color: #b0b8c8 !important;
-        font-size: 17px;
-        line-height: 1.95;
-        margin: 16px 0 20px;
-    }
-    
-    .cyber-post-wrapper p strong {
-        color: #00ff88;
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper p {
-            font-size: 16px;
-            line-height: 1.85;
+
+        ul li:last-child {
+            border-bottom: none;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper p {
+
+        ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 8px;
+            color: #00ff88;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        ol {
+            counter-reset: item;
+        }
+
+        ol li {
+            color: #b0b8c8;
             font-size: 15px;
-            line-height: 1.8;
-            margin: 14px 0 16px;
+            padding: 10px 0 10px 42px;
+            position: relative;
+            line-height: 1.65;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            counter-increment: item;
         }
-    }
-    
-    /* ===== LISTS ===== */
-    .cyber-post-wrapper ul,
-    .cyber-post-wrapper ol {
-        color: #b0b8c8 !important;
-        font-size: 17px;
-        line-height: 2.3;
-        padding-left: 0;
-        margin: 14px 0 22px;
-        list-style: none;
-    }
-    
-    .cyber-post-wrapper ul li,
-    .cyber-post-wrapper ol li {
-        color: #b0b8c8 !important;
-        margin-bottom: 4px;
-        padding-left: 28px;
-        position: relative;
-    }
-    
-    .cyber-post-wrapper ul li::before {
-        content: "▸";
-        color: #00ff88;
-        position: absolute;
-        left: 0;
-        font-weight: 700;
-        font-size: 18px;
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper ul,
-        .cyber-post-wrapper ol {
-            font-size: 15px;
-            line-height: 2.1;
+
+        ol li:last-child {
+            border-bottom: none;
         }
-        .cyber-post-wrapper ul li {
-            padding-left: 24px;
+
+        ol li::before {
+            content: counter(item);
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 26px;
+            height: 26px;
+            border-radius: 8px;
+            background: rgba(0, 255, 136, 0.08);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-    }
-    
-    /* ===== CODE BLOCKS ===== */
-    .code-block {
-        margin: 16px 0 24px;
-        border-radius: 12px;
-        overflow: hidden;
-        background: #0a0a0a !important;
-        border: 1px solid rgba(0, 255, 136, 0.08);
-    }
-    
-    .code-header {
-        background: #0d0d0d !important;
-        padding: 12px 20px;
-        border-bottom: 1px solid rgba(0, 255, 136, 0.06);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-    
-    .code-header span:first-child {
-        color: #00ff88 !important;
-        font-size: 14px;
-        font-weight: 600;
-    }
-    
-    .code-header span:last-child {
-        color: #6a7290 !important;
-        font-size: 12px;
-    }
-    
-    .code-block pre {
-        background: #000000 !important;
-        padding: 22px 24px;
-        border-radius: 0;
-        overflow-x: auto;
-        margin: 0;
-        border: none;
-    }
-    
-    .code-block pre code {
-        color: #b0b8c8 !important;
-        font-family: 'Courier New', 'Consolas', monospace;
-        font-size: 14px;
-        line-height: 1.9;
-        background: transparent !important;
-        white-space: pre-wrap;
-        word-break: break-all;
-    }
-    
-    .code-block pre code .cmd {
-        color: #00ff88;
-    }
-    .code-block pre code .output {
-        color: #6a7290;
-    }
-    .code-block pre code .comment {
-        color: #6a7290;
-        font-style: italic;
-    }
-    
-    @media (max-width: 480px) {
-        .code-block pre {
-            padding: 16px 14px;
+
+        /* ===== INLINE CODE ===== */
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            padding: 2px 7px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            font-weight: 500;
         }
-        .code-block pre code {
-            font-size: 12.5px;
-            line-height: 1.8;
+
+        /* ===== CODE BLOCKS ===== */
+        .code-block {
+            background: #04060a;
+            border: 1px solid rgba(0, 255, 136, 0.12);
+            border-radius: 14px;
+            padding: 22px 24px;
+            margin: 18px 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            line-height: 1.75;
+            overflow-x: auto;
+            position: relative;
         }
-        .code-header {
-            padding: 10px 14px;
+
+        .code-block::before {
+            content: attr(data-lang);
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            font-size: 10px;
+            color: #00ff88;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            opacity: 0.5;
         }
-        .code-header span:first-child {
+
+        .code-block code {
+            color: #d4d4d4;
+            font-family: 'JetBrains Mono', monospace;
+            white-space: pre;
+            background: none;
+            border: none;
+            padding: 0;
+            font-size: 13px;
+        }
+
+        .cmt { color: #5a6478; font-style: italic; }
+        .cmd { color: #00ff88; font-weight: 500; }
+        .var { color: #00d9ff; }
+        .str { color: #ffd166; }
+        .kw  { color: #ff79c6; font-weight: 600; }
+        .num { color: #bd93f9; }
+        .fn  { color: #50fa7b; }
+        .cls { color: #ffb86c; font-weight: 600; }
+
+        /* ===== CALLOUT ===== */
+        .callout {
+            background: rgba(0, 255, 136, 0.04);
+            border-left: 3px solid #00ff88;
+            border-radius: 0 12px 12px 0;
+            padding: 18px 22px;
+            margin: 20px 0;
+            color: #c8d0e0;
+            font-size: 14.5px;
+            line-height: 1.7;
+        }
+
+        .callout strong {
+            color: #00ff88;
+        }
+
+        .callout.warn {
+            background: rgba(255, 107, 107, 0.04);
+            border-left-color: #ff6b6b;
+        }
+
+        .callout.warn strong {
+            color: #ff6b6b;
+        }
+
+        .callout.info {
+            background: rgba(0, 217, 255, 0.04);
+            border-left-color: #00d9ff;
+        }
+
+        .callout.info strong {
+            color: #00d9ff;
+        }
+
+        /* ===== TABLE ===== */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 18px 0;
+            border-radius: 14px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            min-width: 520px;
+        }
+
+        thead {
+            background: rgba(0, 255, 136, 0.06);
+        }
+
+        th {
+            text-align: left;
+            padding: 14px 18px;
+            color: #00ff88;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.15);
+        }
+
+        td {
+            padding: 13px 18px;
+            color: #b0b8c8;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            line-height: 1.6;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: rgba(0, 255, 136, 0.02);
+        }
+
+        td code {
             font-size: 12px;
         }
-        .code-header span:last-child {
+
+        /* ===== SEVERITY BADGES ===== */
+        .sev {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 6px;
             font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
-    }
-    
-    /* ===== INFO BOX ===== */
-    .info-box {
-        background: rgba(0, 217, 255, 0.05);
-        border-left: 5px solid #00d9ff;
-        padding: 18px 24px;
-        margin: 16px 0 22px;
-        border-radius: 0 10px 10px 0;
-    }
-    
-    .info-box p {
-        color: #00d9ff !important;
-        font-size: 15px;
-        margin: 0 !important;
-    }
-    
-    .warning-box {
-        background: rgba(255, 107, 107, 0.05);
-        border-left: 5px solid #ff6b6b;
-        padding: 18px 24px;
-        margin: 16px 0 22px;
-        border-radius: 0 10px 10px 0;
-    }
-    
-    .warning-box p {
-        color: #ff6b6b !important;
-        font-size: 15px;
-        margin: 0 !important;
-    }
-    
-    .success-box {
-        background: rgba(0, 255, 136, 0.05);
-        border-left: 5px solid #00ff88;
-        padding: 18px 24px;
-        margin: 16px 0 22px;
-        border-radius: 0 10px 10px 0;
-    }
-    
-    .success-box p {
-        color: #00ff88 !important;
-        font-size: 15px;
-        margin: 0 !important;
-    }
-    
-    @media (max-width: 480px) {
-        .info-box, .warning-box, .success-box {
-            padding: 14px 16px;
+
+        .sev-critical {
+            background: rgba(220, 20, 60, 0.15);
+            color: #ff4d6d;
+            border: 1px solid rgba(220, 20, 60, 0.3);
         }
-        .info-box p, .warning-box p, .success-box p {
-            font-size: 13.5px;
+
+        .sev-high {
+            background: rgba(255, 107, 107, 0.12);
+            color: #ff6b6b;
+            border: 1px solid rgba(255, 107, 107, 0.3);
         }
-    }
-    
-    /* ===== HORIZONTAL RULE ===== */
-    .cyber-post-wrapper hr {
-        border: none;
-        border-top: 1px solid rgba(0, 255, 136, 0.06);
-        margin: 30px 0 32px;
-        background: transparent;
-        height: 1px;
-    }
-    
-    /* ===== SHARE SECTION ===== */
-    .share-section {
-        margin-top: 50px;
-        padding-top: 30px;
-        border-top: 1px solid rgba(0, 255, 136, 0.08);
-    }
-    
-    .share-section p {
-        color: #6a7290 !important;
-        font-size: 15px;
-        text-align: center;
-        margin-bottom: 16px !important;
-    }
-    
-    .share-buttons {
-        display: flex;
-        gap: 16px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .share-buttons a {
-        padding: 12px 28px;
-        border: 1px solid rgba(0, 255, 136, 0.12);
-        border-radius: 10px;
-        color: #b0b8c8 !important;
-        text-decoration: none;
-        font-size: 15px;
-        font-weight: 500;
-        transition: 0.3s;
-        background: transparent;
-    }
-    
-    .share-buttons a:hover {
-        border-color: #00ff88;
-        color: #00ff88 !important;
-        background: rgba(0, 255, 136, 0.04);
-        transform: translateY(-2px);
-    }
-    
-    @media (max-width: 480px) {
-        .share-buttons a {
-            padding: 10px 18px;
+
+        .sev-medium {
+            background: rgba(255, 179, 71, 0.12);
+            color: #ffb347;
+            border: 1px solid rgba(255, 179, 71, 0.3);
+        }
+
+        .sev-low {
+            background: rgba(0, 217, 255, 0.1);
+            color: #00d9ff;
+            border: 1px solid rgba(0, 217, 255, 0.3);
+        }
+
+        .sev-info {
+            background: rgba(0, 255, 136, 0.08);
+            color: #00ff88;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        /* ===== USE CASES GRID ===== */
+        .use-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 20px 0 4px;
+        }
+
+        .use-card {
+            background: rgba(0, 255, 136, 0.03);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 14px;
+            padding: 20px 18px;
+            transition: all 0.25s ease;
+        }
+
+        .use-card:hover {
+            border-color: rgba(0, 255, 136, 0.3);
+            background: rgba(0, 255, 136, 0.06);
+            transform: translateY(-3px);
+        }
+
+        .use-card .use-icon {
+            font-size: 26px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .use-card h4 {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #00ff88;
+            margin: 0 0 8px;
+        }
+
+        .use-card p {
             font-size: 13px;
+            color: #8892a8;
+            line-height: 1.55;
+            margin: 0;
         }
-        .share-section {
-            margin-top: 35px;
-            padding-top: 22px;
-        }
-    }
-    
-    /* ===== BLOGGER OVERRIDES ===== */
-    .blog-posts {
-        max-width: 100% !important;
-        padding: 0 !important;
-    }
-    
-    .post-body {
-        padding: 0 !important;
-        background: #000000 !important;
-    }
-    
-    .post-body-content {
-        background: #000000 !important;
-        padding: 0 !important;
-    }
-    
-    .post-outer {
-        background: #000000 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-    
-    .post {
-        background: #000000 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-    
-    /* ===== INLINE CODE ===== */
-    .cyber-post-wrapper code:not(pre code) {
-        background: #0a0a0a;
-        padding: 2px 12px;
-        border-radius: 4px;
-        color: #00ff88;
-        border: 1px solid rgba(0, 255, 136, 0.08);
-        font-size: 14.5px;
-        font-family: 'Courier New', monospace;
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper code:not(pre code) {
+
+        /* ===== FOOTER ===== */
+        .page-footer {
+            text-align: center;
+            padding: 48px 0 0;
+            margin-top: 40px;
+            border-top: 1px solid rgba(0, 255, 136, 0.08);
+            color: #4a5568;
             font-size: 13px;
-            padding: 1px 8px;
+            line-height: 1.8;
         }
-    }
-    
-    /* ===== IMAGES ===== */
-    .cyber-post-wrapper img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 12px;
-        margin: 10px 0;
-        border: 1px solid rgba(0, 255, 136, 0.05);
-    }
-    
-    .separator {
-        clear: both;
-        text-align: center;
-    }
-    
-    /* ===== LINK STYLES ===== */
-    .cyber-post-wrapper a {
-        color: #00ff88;
-        text-decoration: none;
-        transition: 0.3s;
-    }
-    
-    .cyber-post-wrapper a:hover {
-        color: #00d9ff;
-        text-decoration: underline;
-    }
-    
-    .text-center {
-        text-align: center;
-    }
-    
-    .mt-10 {
-        margin-top: 10px;
-    }
-</style>
 
-<!-- ===== MAIN CONTENT ===== -->
-<div class="cyber-post-wrapper">
+        .page-footer .brand {
+            font-family: 'JetBrains Mono', monospace;
+            color: #00ff88;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
 
-    <div class="cyber-content">
+        .page-footer a {
+            border-bottom: none;
+        }
 
-        <!-- ===== POST HEADER ===== -->
-        <div class="post-header-cyber">
-            <div class="post-badge">🔍 Vulnerability Assessment</div>
-            <h1 class="post-title-cyber">Nessus on Kali Linux: <strong>A Comprehensive Vulnerability Scanner</strong></h1>
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .container { padding: 28px 18px 70px; }
+            .section { padding: 26px 22px; border-radius: 16px; }
+            .section-title { font-size: 20px; gap: 12px; }
+            .section-title .icon { width: 40px; height: 40px; font-size: 18px; }
+            h1 { font-size: 32px; }
+            .subtitle { font-size: 15px; }
+            .toc { padding: 20px 18px; }
+            .toc-list { grid-template-columns: 1fr; }
+            p { font-size: 14.5px; }
+            ul li { font-size: 14px; }
+            ol li { font-size: 14px; }
+            .code-block { font-size: 12px; padding: 16px 14px; }
+            .code-block code { font-size: 12px; }
+            h3 { font-size: 16px; }
+            .use-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 20px 12px 60px; }
+            h1 { font-size: 26px; }
+            .section { padding: 22px 16px; }
+            .section-title { font-size: 17px; }
+            .section-title .icon { width: 34px; height: 34px; font-size: 15px; }
+            .meta-bar { gap: 8px; }
+            .meta-item { font-size: 11px; padding: 6px 12px; }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #05080e; }
+        ::-webkit-scrollbar-thumb { background: #1a2a2a; border-radius: 20px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00ff8833; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ===== HEADER ===== -->
+    <header class="page-header">
+        <div class="badge">
+            <span class="dot"></span>
+            CYBERSUME · COMPLETE GUIDE
         </div>
-
-        <!-- ===== INTRODUCTION ===== -->
-        <p>
-            Nessus is one of the most widely used vulnerability scanners in the cybersecurity community, developed by Tenable Network Security. Originally created by Renaud Deraison as an open-source project in 1998, it was commercialized in 2005 and has since become the go-to tool for network infrastructure vulnerability assessment, with over <strong>75,000 organizations worldwide</strong> relying on it.
+        <h1>Nessus <span class="highlight">Tools</span></h1>
+        <p class="subtitle">
+            The complete, in-depth guide to Nessus — the world's most widely deployed vulnerability scanner. 
+            From installation and configuration to advanced scanning and result interpretation.
         </p>
 
-        <!-- ===== FEATURED IMAGE WITH AMAZON LINK ===== -->
-        <div class="featured-box">
-            <div class="featured-image">
-                <a href="https://www.amazon.com/dp/B0H7KFXL1G" target="_blank" rel="noopener">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgImxC-NEcTE8oIVR0POZt55Icf5FaBaYBwE07Iw0G2ecqm_XOAbcwrMU0Bh1GHP6pjie1EhMXutI7BP4hgmmB7K7RGAbrML7484M7ADFh9SGW518Nc-mNOJ9J_-njkRK3h9N_U8wfSC8gdLeHs34qrTAycWILTH2cHpoB6zysjAIrx1yezysNP-Cu1ddd4/s320/Nessus.png" 
-                         alt="Nessus on Kali Linux Book"/>
-                </a>
-               
+        <div class="meta-bar">
+            <div class="meta-item"><span class="ico">📖</span> <span>Reading time: <strong>22 min</strong></span></div>
+            <div class="meta-item"><span class="ico">🔧</span> <span>Category: <strong>Security Tools</strong></span></div>
+            <div class="meta-item"><span class="ico">🛡️</span> <span>Level: <strong>Beginner → Advanced</strong></span></div>
+            <div class="meta-item"><span class="ico">⚡</span> <span>Updated: <strong>2025</strong></span></div>
+        </div>
+    </header>
+
+    <!-- ===== TABLE OF CONTENTS ===== -->
+    <nav class="toc">
+        <div class="toc-title">📑 Table of Contents</div>
+        <ul class="toc-list">
+            <li><a href="#intro"><span class="num">01</span> Introduction</a></li>
+            <li><a href="#why"><span class="num">02</span> Why Nessus?</a></li>
+            <li><a href="#versions"><span class="num">03</span> Versions &amp; Editions</a></li>
+            <li><a href="#install"><span class="num">04</span> Installation</a></li>
+            <li><a href="#setup"><span class="num">05</span> Initial Setup</a></li>
+            <li><a href="#interface"><span class="num">06</span> Web Interface</a></li>
+            <li><a href="#scans"><span class="num">07</span> Scan Types</a></li>
+            <li><a href="#firstscan"><span class="num">08</span> Your First Scan</a></li>
+            <li><a href="#advanced"><span class="num">09</span> Advanced Config</a></li>
+            <li><a href="#plugins"><span class="num">10</span> Plugins &amp; Families</a></li>
+            <li><a href="#results"><span class="num">11</span> Reading Results</a></li>
+            <li><a href="#reports"><span class="num">12</span> Report Generation</a></li>
+            <li><a href="#cli"><span class="num">13</span> Nessus CLI</a></li>
+            <li><a href="#api"><span class="num">14</span> Nessus API</a></li>
+            <li><a href="#best"><span class="num">15</span> Best Practices</a></li>
+            <li><a href="#legal"><span class="num">16</span> Legal &amp; Ethics</a></li>
+            <li><a href="#conclusion"><span class="num">17</span> Conclusion</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== 01 INTRO ===== -->
+    <section class="section" id="intro">
+        <span class="section-number">01 · INTRODUCTION</span>
+        <h2 class="section-title">
+            <span class="icon">🔧</span>
+            What Is Nessus?
+        </h2>
+        <p>
+            <strong>Nessus</strong> is a proprietary vulnerability scanner developed by <em>Tenable, Inc.</em> First released in 1998 by Renaud Deraison, it has grown to become the <strong>world's most widely deployed vulnerability assessment tool</strong>. Security professionals, sysadmins, and penetration testers use it to identify misconfigurations, missing patches, and vulnerabilities across their networks.
+        </p>
+        <p>
+            Nessus works by remotely scanning hosts — checking for thousands of known vulnerabilities, weak configurations, and compliance issues. It maintains a plugin database of over <strong>180,000 plugins</strong> covering everything from missing Windows patches to default credentials to web application flaws.
+        </p>
+        <p>
+            For ethical hackers, Nessus is a critical tool in the <strong>vulnerability assessment phase</strong> of a penetration test. It helps you quickly identify low-hanging fruit, prioritize targets, and build a comprehensive view of the attack surface.
+        </p>
+        <div class="callout info">
+            <strong>💡 Note:</strong> Nessus is a <em>vulnerability scanner</em>, not an exploitation tool. It identifies potential weaknesses — it doesn't exploit them. That's where tools like Metasploit come in.
+        </div>
+    </section>
+
+    <!-- ===== 02 WHY ===== -->
+    <section class="section" id="why">
+        <span class="section-number">02 · WHY NESSUS</span>
+        <h2 class="section-title">
+            <span class="icon">💡</span>
+            Why Use Nessus?
+        </h2>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">🎯</span>
+                <h4>Industry Standard</h4>
+                <p>Nessus is the most trusted vulnerability scanner — used by 30,000+ organizations worldwide.</p>
             </div>
-            <div class="featured-cta">
-                <p>📚 <strong style="color:#00ff88;">Get Your Copy Today!</strong></p>
-                <a class="main-link" href="https://www.amazon.com/dp/B0H7KFXL1G" target="_blank" rel="noopener">
-                    🛒 Buy Now on Amazon
-                </a>
-                
-                
+            <div class="use-card">
+                <span class="use-icon">📊</span>
+                <h4>Comprehensive Coverage</h4>
+                <p>180,000+ plugins covering OS, network, web, cloud, and compliance checks.</p>
             </div>
-        </div>
-
-        <!-- ===== WHAT MAKES NESSUS POWERFUL ===== -->
-        <h3>🔧 What Makes Nessus Powerful</h3>
-        <p>
-            Nessus operates by scanning target systems to identify security weaknesses through a vast library of pre-built checks called <strong>plugins</strong>. These plugins can detect outdated software, misconfigurations, weak passwords, unauthorized access, and known vulnerabilities across operating systems, applications, and network devices. The tool provides detailed findings with severity ratings (<strong style="color:#ff6b6b;">Critical</strong>, <strong style="color:#ff6b6b;">High</strong>, <strong style="color:#ffcc00;">Medium</strong>, <strong style="color:#00d9ff;">Low</strong>, <strong style="color:#6a7290;">Info</strong>), CVSS scores, and specific remediation recommendations.
-        </p>
-
-        <hr/>
-
-        <!-- ===== INSTALLATION ===== -->
-        <h3>📥 Installation on Kali Linux</h3>
-        <p>
-            Since Kali doesn't come with Nessus pre-installed, you must download the appropriate Debian package from Tenable's website and install it using the <code>dpkg</code> command:
-        </p>
-
-        <div class="code-block">
-            <div class="code-header">
-                <span>💻 Terminal</span>
-                <span>Installation</span>
+            <div class="use-card">
+                <span class="use-icon">⚡</span>
+                <h4>Fast &amp; Accurate</h4>
+                <p>Scans thousands of hosts in minutes with low false-positive rates.</p>
             </div>
-            <pre><code><span class="cmd">sudo dpkg -i Nessus-10.8.5-ubuntu1604_amd64.deb</span></code></pre>
-        </div>
-
-        <p>
-            After installation, start the Nessus service:
-        </p>
-
-        <div class="code-block">
-            <div class="code-header">
-                <span>💻 Terminal</span>
-                <span>Start Service</span>
+            <div class="use-card">
+                <span class="use-icon">📝</span>
+                <h4>Detailed Reports</h4>
+                <p>Executive summaries, technical reports, and compliance outputs.</p>
             </div>
-            <pre><code><span class="cmd">sudo systemctl start nessusd.service</span></code></pre>
-        </div>
-
-        <div class="info-box">
-            <p>🌐 Then access the web interface at <strong>https://localhost:8834/</strong> to complete the setup, where you'll register with an activation code (available for free through Nessus Essentials) and create an administrator account.</p>
-        </div>
-
-        <hr/>
-
-        <!-- ===== REAL-WORLD SCANNING ===== -->
-        <h3>🎯 Real-World Scanning Example</h3>
-        <p>
-            A practical example of using Nessus on Kali involves scanning an intentionally vulnerable <strong>Metasploitable 2</strong> target.
-        </p>
-
-        <h4>Step 1: Create a Scan Policy</h4>
-        <p>
-            In the Nessus web interface, navigate to <strong>Policies → New Policy → Advanced Scan</strong>. Configure discovery settings to scan all ports (0-65535) on both TCP and UDP.
-        </p>
-
-        <div class="success-box">
-            <p>🔑 Add SSH credentials for authenticated scanning (username: msfadmin, password: msfadmin). This allows Nessus to inspect installed packages and configurations internally, producing significantly more detailed findings than an unauthenticated scan.</p>
-        </div>
-
-        <h4>Step 2: Launch the Scan</h4>
-        <p>
-            Create a new scan targeting your Metasploitable VM's IP address and launch it. A typical credentialed scan of Metasploitable 2 takes approximately <strong>6-10 minutes</strong> and can identify around <strong>63 vulnerabilities</strong>, including 6 critical and 4 high-severity issues.
-        </p>
-
-        <h4>Step 3: Analyze Results</h4>
-        <p>
-            The scan report reveals grouped vulnerabilities, such as <strong>"Windows / Apache Log4j (Multiple Issues)"</strong> related to Log4Shell (CVE-2021-44228), along with critical remote code execution vulnerabilities and medium-severity denial of service vectors.
-        </p>
-
-        <hr/>
-
-        <!-- ===== COMMAND-LINE OPERATIONS ===== -->
-        <h3>⌨️ Command-Line Operations</h3>
-        <p>
-            For automation and headless environments, Nessus provides the <code>nessuscli</code> tool. Key commands include:
-        </p>
-
-        <div class="code-block">
-            <div class="code-header">
-                <span>💻 Terminal</span>
-                <span>nessuscli Commands</span>
+            <div class="use-card">
+                <span class="use-icon">🔌</span>
+                <h4>Integrations</h4>
+                <p>Works with Metasploit, Splunk, ServiceNow, and dozens more.</p>
             </div>
-            <pre><code><span class="comment"># Update plugins</span>
-<span class="cmd">sudo /opt/nessus/sbin/nessuscli update</span>
-
-<span class="comment"># Create a scan</span>
-<span class="cmd">sudo /opt/nessus/sbin/nessuscli scan new --name "Linux Scan" --policy "Basic Network Scan" --targets "192.168.1.10-20"</span>
-
-<span class="comment"># Export report</span>
-<span class="cmd">sudo /opt/nessus/sbin/nessuscli report export --id 1 --format pdf --file /tmp/report.pdf</span></code></pre>
-        </div>
-
-        <div class="info-box">
-            <p>🔗 Nessus can also integrate directly with Metasploit through its bridge plugin, allowing penetration testers to launch scans directly from msfconsole and feed results into exploitation workflows.</p>
-        </div>
-
-        <hr/>
-
-        <!-- ===== SHARE SECTION ===== -->
-        <div class="share-section">
-            <p>📤 Share this post with your network</p>
-            <div class="share-buttons">
-                <a href="#" onclick="window.open('https://twitter.com/intent/tweet?text=Nessus%20on%20Kali%20Linux%20-%20A%20Comprehensive%20Vulnerability%20Scanner!%20%23Nessus%20%23KaliLinux%20%23CyberSecurity%20%23VulnerabilityAssessment','_blank');return false;">
-                    🐦 Twitter
-                </a>
-                <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href),'_blank');return false;">
-                    📘 Facebook
-                </a>
-                <a href="#" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank');return false;">
-                    💼 LinkedIn
-                </a>
+            <div class="use-card">
+                <span class="use-icon">☁️</span>
+                <h4>Cloud &amp; API</h4>
+                <p>REST API for automation and integration into CI/CD pipelines.</p>
             </div>
         </div>
+        <div class="callout">
+            <strong>🔑 Key Insight:</strong> Nessus saves you hours of manual enumeration. It finds the easy stuff so you can focus on deep exploitation and logic flaws.
+        </div>
+    </section>
 
-    </div>
+    <!-- ===== 03 VERSIONS ===== -->
+    <section class="section" id="versions">
+        <span class="section-number">03 · VERSIONS</span>
+        <h2 class="section-title">
+            <span class="icon">📦</span>
+            Nessus Versions &amp; Editions
+        </h2>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Edition</th><th>Price</th><th>Hosts</th><th>Best For</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Nessus Essentials</strong></td><td>Free</td><td>16 IPs</td><td>Students, home labs, learning</td></tr>
+                    <tr><td><strong>Nessus Professional</strong></td><td>~$4,000/yr</td><td>Unlimited</td><td>Pentesters, consultants</td></tr>
+                    <tr><td><strong>Nessus Expert</strong></td><td>~$6,000/yr</td><td>Unlimited</td><td>External attack surface, cloud</td></tr>
+                    <tr><td><strong>Tenable.io</strong></td><td>Subscription</td><td>Cloud-based</td><td>Enterprise cloud scanning</td></tr>
+                    <tr><td><strong>Tenable.sc</strong></td><td>Enterprise</td><td>On-prem</td><td>Large enterprises</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout info">
+            <strong>💡 Note:</strong> <strong>Nessus Essentials</strong> is completely free — you just need to register for an activation code. It scans up to 16 IPs, which is perfect for home labs and learning.
+        </div>
+    </section>
+
+    <!-- ===== 04 INSTALL ===== -->
+    <section class="section" id="install">
+        <span class="section-number">04 · INSTALLATION</span>
+        <h2 class="section-title">
+            <span class="icon">⬇️</span>
+            Installing Nessus on Kali Linux
+        </h2>
+
+        <h3>Step 1: Download the Installer</h3>
+        <p>Go to <a href="https://www.tenable.com/downloads/nessus" target="_blank">tenable.com/downloads/nessus</a> and download the Debian package for your architecture (amd64).</p>
+
+        <h3>Step 2: Install Nessus</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Install the .deb package</span>
+<span class="cmd">sudo</span> dpkg -i Nessus-10.x.x-debian10_amd64.deb
+
+<span class="cmt"># Fix any missing dependencies</span>
+<span class="cmd">sudo</span> apt install -f
+
+<span class="cmt"># Start the Nessus service</span>
+<span class="cmd">sudo</span> systemctl start nessusd
+<span class="cmd">sudo</span> systemctl enable nessusd
+
+<span class="cmt"># Check status</span>
+<span class="cmd">sudo</span> systemctl status nessusd</code>
+        </div>
+
+        <h3>Step 3: Access the Web Interface</h3>
+        <p>Open your browser and navigate to:</p>
+        <div class="code-block" data-lang="text">
+<code>https://localhost:8834</code>
+        </div>
+
+        <div class="callout info">
+            <strong>💡 Note:</strong> Nessus uses HTTPS with a self-signed certificate — you'll need to accept the security warning in your browser. The default port is <code>8834</code>.
+        </div>
+    </section>
+
+    <!-- ===== 05 SETUP ===== -->
+    <section class="section" id="setup">
+        <span class="section-number">05 · INITIAL SETUP</span>
+        <h2 class="section-title">
+            <span class="icon">⚙️</span>
+            Initial Setup &amp; Activation
+        </h2>
+
+        <ol>
+            <li><strong>Welcome screen</strong> — Choose "Nessus Essentials" for the free version.</li>
+            <li><strong>Get activation code</strong> — Enter your email; Tenable will send you a code instantly.</li>
+            <li><strong>Create admin account</strong> — Set a strong username and password.</li>
+            <li><strong>Wait for plugin download</strong> — Nessus will download and compile its plugin database (10-20 minutes on first run).</li>
+            <li><strong>Ready to scan</strong> — Once plugins are loaded, you'll reach the main dashboard.</li>
+        </ol>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># If plugin compilation takes too long, check logs</span>
+<span class="cmd">sudo</span> tail -f /opt/nessus/var/nessus/logs/nessusd.messages
+
+<span class="cmt"># Restart Nessus if needed</span>
+<span class="cmd">sudo</span> systemctl restart nessusd</code>
+        </div>
+
+        <div class="callout warn">
+            <strong>⚠️ Warning:</strong> Don't interrupt the plugin compilation. It can take up to 30 minutes on slower systems. If it fails, restart the service and it will resume.
+        </div>
+    </section>
+
+    <!-- ===== 06 INTERFACE ===== -->
+    <section class="section" id="interface">
+        <span class="section-number">06 · WEB INTERFACE</span>
+        <h2 class="section-title">
+            <span class="icon">🖥️</span>
+            The Nessus Web Interface
+        </h2>
+
+        <h3>Main Sections</h3>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">📊</span>
+                <h4>My Scans</h4>
+                <p>View active, completed, and scheduled scans.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📚</span>
+                <h4>Policies</h4>
+                <p>Create scan templates with custom settings.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🎯</span>
+                <h4>Scans</h4>
+                <p>Browse and launch pre-built scan templates.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔌</span>
+                <h4>Plugins</h4>
+                <p>Browse the plugin library by family.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">⚙️</span>
+                <h4>Settings</h4>
+                <p>Configure users, notifications, and advanced settings.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📖</span>
+                <h4>Resources</h4>
+                <p>Documentation, support, and community links.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 07 SCANS ===== -->
+    <section class="section" id="scans">
+        <span class="section-number">07 · SCAN TYPES</span>
+        <h2 class="section-title">
+            <span class="icon">🎯</span>
+            Nessus Scan Types
+        </h2>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Scan Type</th><th>Purpose</th><th>Best For</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Basic Network Scan</strong></td><td>Full system scan</td><td>General purpose</td></tr>
+                    <tr><td><strong>Host Discovery</strong></td><td>Find live hosts</td><td>Network mapping</td></tr>
+                    <tr><td><strong>Advanced Scan</strong></td><td>Fully customizable</td><td>Expert users</td></tr>
+                    <tr><td><strong>Advanced Dynamic Scan</strong></td><td>Dynamic plugin selection</td><td>Cloud/DevOps</td></tr>
+                    <tr><td><strong>Web Application Tests</strong></td><td>Web app scanning</td><td>Web pentesting</td></tr>
+                    <tr><td><strong>Credentialed Patch Audit</strong></td><td>Authenticated patch check</td><td>Patch management</td></tr>
+                    <tr><td><strong>Malware Scan</strong></td><td>Detect malware</td><td>Compromise assessment</td></tr>
+                    <tr><td><strong>Compliance Scan</strong></td><td>PCI DSS, HIPAA, CIS</td><td>Regulatory compliance</td></tr>
+                    <tr><td><strong>SCADA Scan</strong></td><td>Industrial control systems</td><td>ICS/SCADA audits</td></tr>
+                    <tr><td><strong>Badlock Detection</strong></td><td>Detect Badlock</td><td>Specific vuln</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Unauthenticated vs Authenticated Scans</h3>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">🌐</span>
+                <h4>Unauthenticated</h4>
+                <p>Scans from outside — checks services, banners, and known vulnerabilities. Faster but limited.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔑</span>
+                <h4>Authenticated</h4>
+                <p>Logs into the target (SSH/SMB) and checks local configuration. Slower but far more thorough.</p>
+            </div>
+        </div>
+
+        <div class="callout">
+            <strong>💡 Pro Tip:</strong> Always try to run <em>authenticated</em> scans when you have credentials. They catch 10x more vulnerabilities — missing patches, weak configs, and local issues.
+        </div>
+    </section>
+
+    <!-- ===== 08 FIRST SCAN ===== -->
+    <section class="section" id="firstscan">
+        <span class="section-number">08 · YOUR FIRST SCAN</span>
+        <h2 class="section-title">
+            <span class="icon">🚀</span>
+            Running Your First Scan
+        </h2>
+
+        <ol>
+            <li><strong>Click "New Scan"</strong> — Top-right corner of the Nessus dashboard.</li>
+            <li><strong>Choose "Basic Network Scan"</strong> — Good starting point.</li>
+            <li><strong>Name and describe</strong> — Give it a meaningful name like "Lab Scan 2025".</li>
+            <li><strong>Add targets</strong> — Enter IPs, ranges, or hostnames:
+                <ul>
+                    <li>Single IP: <code>192.168.1.10</code></li>
+                    <li>Range: <code>192.168.1.1-20</code></li>
+                    <li>Subnet: <code>192.168.1.0/24</code></li>
+                    <li>File: upload a list of targets</li>
+                </ul>
+            </li>
+            <li><strong>Configure credentials</strong> — Optional but recommended (SSH/SMB/Windows).</li>
+            <li><strong>Save and launch</strong> — Click "Save" then "Launch".</li>
+            <li><strong>Wait for completion</strong> — Watch progress in the "My Scans" view.</li>
+        </ol>
+
+        <div class="code-block" data-lang="text">
+<code>Example Scan Configuration:
+───────────────────────────────
+Name:     Lab Network Scan
+Policy:   Basic Network Scan
+Targets:  192.168.1.0/24
+Schedule: On Demand
+Email:    you@example.com</code>
+        </div>
+    </section>
+
+    <!-- ===== 09 ADVANCED ===== -->
+    <section class="section" id="advanced">
+        <span class="section-number">09 · ADVANCED CONFIG</span>
+        <h2 class="section-title">
+            <span class="icon">⚙️</span>
+            Advanced Scan Configuration
+        </h2>
+
+        <h3>Performance Settings</h3>
+        <ul>
+            <li><strong>Max concurrent checks per host</strong> — Higher = faster but more aggressive.</li>
+            <li><strong>Max simultaneous hosts</strong> — How many hosts to scan in parallel.</li>
+            <li><strong>Network timeout</strong> — How long to wait for responses (default 5 sec).</li>
+            <li><strong>Throttle scan</strong> — Reduce network load on production networks.</li>
+        </ul>
+
+        <h3>Port Scanning</h3>
+        <ul>
+            <li><strong>Port range</strong> — Default is 1-65535 (full scan). Use "Common ports" for fast scans.</li>
+            <li><strong>Scan type</strong> — SYN, TCP Connect, or UDP. SYN is stealthier.</li>
+            <li><strong>Use Nmap</strong> — Nessus can use its own scanner or invoke Nmap.</li>
+        </ul>
+
+        <h3>Credentials</h3>
+        <ul>
+            <li><strong>SSH</strong> — Username/password or key-based authentication.</li>
+            <li><strong>SMB / Windows</strong> — Domain, username, password, or hash.</li>
+            <li><strong>Kerberos</strong> — For AD environments.</li>
+            <li><strong>SNMP</strong> — Community string for network devices.</li>
+            <li><strong>Database</strong> — MySQL, Oracle, PostgreSQL, MSSQL.</li>
+        </ul>
+
+        <h3>Compliance &amp; Plugins</h3>
+        <ul>
+            <li><strong>Disable specific plugin families</strong> — Speed up scans by turning off irrelevant checks.</li>
+            <li><strong>Enable compliance checks</strong> — PCI DSS, HIPAA, CIS Benchmarks.</li>
+            <li><strong>Safe checks</strong> — Enable to avoid crashing fragile systems.</li>
+        </ul>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Example advanced scan settings</span>
+<span class="var">Max Hosts</span>             = <span class="num">30</span>
+<span class="var">Max Checks/Host</span>        = <span class="num">15</span>
+<span class="var">Network Timeout</span>         = <span class="num">10</span> sec
+<span class="var">Port Range</span>              = <span class="num">1</span>-<span class="num">65535</span>
+<span class="var">Scan Type</span>               = SYN
+<span class="var">Safe Checks</span>             = Enabled
+<span class="var">Throttle</span>                = Disabled</code>
+        </div>
+    </section>
+
+    <!-- ===== 10 PLUGINS ===== -->
+    <section class="section" id="plugins">
+        <span class="section-number">10 · PLUGINS</span>
+        <h2 class="section-title">
+            <span class="icon">🔌</span>
+            Plugins &amp; Plugin Families
+        </h2>
+        <p>
+            Nessus' power comes from its <strong>plugin database</strong> — 180,000+ scripts that test for specific vulnerabilities. Each plugin has a family, a severity, and a description.
+        </p>
+
+        <h3>Common Plugin Families</h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Family</th><th>What It Checks</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Windows</td><td>Windows OS vulnerabilities, patches, configs</td></tr>
+                    <tr><td>Linux</td><td>Linux distros, kernel, package versions</td></tr>
+                    <tr><td>Web Servers</td><td>Apache, Nginx, IIS vulnerabilities</td></tr>
+                    <tr><td>Databases</td><td>MySQL, Oracle, MSSQL, PostgreSQL</td></tr>
+                    <tr><td>Firewalls</td><td>Firewall misconfigurations</td></tr>
+                    <tr><td>SNMP</td><td>SNMP community strings and device issues</td></tr>
+                    <tr><td>CGI abuses</td><td>Legacy CGI script vulnerabilities</td></tr>
+                    <tr><td>Default Unix Accounts</td><td>Default credentials on Unix systems</td></tr>
+                    <tr><td>Denial of Service</td><td>DoS vulnerabilities</td></tr>
+                    <tr><td>Service Detection</td><td>Identify services and versions</td></tr>
+                    <tr><td>Gain a shell remotely</td><td>Direct RCE vulnerabilities</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Update plugins manually from CLI</span>
+<span class="cmd">sudo</span> /opt/nessus/sbin/nessuscli update
+
+<span class="cmt"># List plugin families</span>
+<span class="cmd">sudo</span> /opt/nessus/sbin/nessuscli fetch --list-plugins
+
+<span class="cmt"># Check plugin count</span>
+<span class="cmd">sudo</span> /opt/nessus/sbin/nessuscli update --plugins-only</code>
+        </div>
+    </section>
+
+    <!-- ===== 11 RESULTS ===== -->
+    <section class="section" id="results">
+        <span class="section-number">11 · READING RESULTS</span>
+        <h2 class="section-title">
+            <span class="icon">📊</span>
+            Interpreting Scan Results
+        </h2>
+
+        <h3>Severity Levels</h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Severity</th><th>CVSS Range</th><th>Action</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="sev sev-critical">Critical</span></td><td>9.0 – 10.0</td><td>Fix immediately</td></tr>
+                    <tr><td><span class="sev sev-high">High</span></td><td>7.0 – 8.9</td><td>Fix ASAP</td></tr>
+                    <tr><td><span class="sev sev-medium">Medium</span></td><td>4.0 – 6.9</td><td>Fix in next cycle</td></tr>
+                    <tr><td><span class="sev sev-low">Low</span></td><td>0.1 – 3.9</td><td>Fix when possible</td></tr>
+                    <tr><td><span class="sev sev-info">Info</span></td><td>0</td><td>Informational</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Reading a Finding</h3>
+        <p>Each finding in Nessus contains:</p>
+        <ul>
+            <li><strong>Plugin ID</strong> — Unique identifier for the check</li>
+            <li><strong>Severity</strong> — Critical/High/Medium/Low/Info</li>
+            <li><strong>Description</strong> — What the vulnerability is</li>
+            <li><strong>Solution</strong> — How to fix it</li>
+            <li><strong>Risk Information</strong> — CVSS score, impact</li>
+            <li><strong>Vulnerability Information</strong> — References (CVE, CWE, etc.)</li>
+            <li><strong>Output</strong> — Raw evidence of the finding</li>
+            <li><strong>Port / Protocol</strong> — Where it was found</li>
+        </ul>
+
+        <h3>Prioritization</h3>
+        <ol>
+            <li><strong>Critical + High</strong> — Fix these first. They're exploitable.</li>
+            <li><strong>Remote + authenticated</strong> — Higher risk than local-only issues.</li>
+            <li><strong>Public-facing services</strong> — Internet-exposed = highest priority.</li>
+            <li><strong>Known exploits</strong> — Check if Metasploit has a module. If yes, it's urgent.</li>
+            <li><strong>Compliance violations</strong> — Required for regulatory audits.</li>
+        </ol>
+
+        <div class="callout info">
+            <strong>💡 Pro Tip:</strong> Cross-reference Nessus findings with <code>searchsploit</code> or <a href="https://www.exploit-db.com/" target="_blank">exploit-db.com</a> to see if a public exploit exists. That instantly tells you which findings are most dangerous.
+        </div>
+    </section>
+
+    <!-- ===== 12 REPORTS ===== -->
+    <section class="section" id="reports">
+        <span class="section-number">12 · REPORTS</span>
+        <h2 class="section-title">
+            <span class="icon">📝</span>
+            Generating Reports
+        </h2>
+
+        <div class="code-block" data-lang="text">
+<code>Report Formats Supported:
+────────────────────────────
+.pdf     → Executive and technical reports
+.html    → Interactive web reports
+.csv     → Spreadsheet-friendly exports
+.db      → Nessus native format (re-importable)
+.xml     → Machine-readable (V2)
+.json    → API-friendly output
+.nessus  → Full scan archive</code>
+        </div>
+
+        <h3>Report Types</h3>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">👔</span>
+                <h4>Executive Summary</h4>
+                <p>High-level overview for management. Charts, risk scores, no technical details.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🔧</span>
+                <h4>Technical Report</h4>
+                <p>Full details for engineers — plugin IDs, solutions, and evidence.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📋</span>
+                <h4>Compliance Report</h4>
+                <p>Mapped to PCI DSS, HIPAA, CIS, and other frameworks.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">📊</span>
+                <h4>CSV Export</h4>
+                <p>Raw data for further analysis in Excel or Splunk.</p>
+            </div>
+        </div>
+
+        <h3>Generating a Report</h3>
+        <ol>
+            <li>Open the completed scan</li>
+            <li>Click <strong>"Export"</strong> at the top right</li>
+            <li>Choose format (PDF, HTML, CSV, etc.)</li>
+            <li>Choose chapters (hosts, vulnerabilities, remediations)</li>
+            <li>Click "Export" — the report downloads instantly</li>
+        </ol>
+    </section>
+
+    <!-- ===== 13 CLI ===== -->
+    <section class="section" id="cli">
+        <span class="section-number">13 · NESSUS CLI</span>
+        <h2 class="section-title">
+            <span class="icon">⌨️</span>
+            Nessus Command-Line Interface
+        </h2>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Start / stop service</span>
+<span class="cmd">sudo</span> systemctl start nessusd
+<span class="cmd">sudo</span> systemctl stop nessusd
+<span class="cmd">sudo</span> systemctl restart nessusd
+<span class="cmd">sudo</span> systemctl status nessusd
+
+<span class="cmt"># Manage users</span>
+<span class="cmd">sudo</span> /opt/nessus/sbin/nessuscli adduser
+<span class="cmd">sudo</span> /opt/nessus/sbin/nessuscli lsuser
+<span class="cmd">sudo</span> /opt/nessus/sbin/nessuscli rmuser
+
+<span class="cmt"># Update plugins</span>
+<span class="cmd">sudo</span> /opt/nessus/sbin/nessuscli update --all
+
+<span class="cmt"># Fetch activation code</span>
+<span class="cmd">sudo</span> /opt/nessus/sbin/nessuscli fetch --register YOUR-CODE
+
+<span class="cmt"># Reset admin password</span>
+<span class="cmd">sudo</span> /opt/nessus/sbin/nessuscli chpasswd admin
+
+<span class="cmt"># Backup / restore</span>
+<span class="cmd">sudo</span> /opt/nessus/sbin/nessuscli backup --create backup.tar.gz
+<span class="cmd">sudo</span> /opt/nessus/sbin/nessuscli backup --restore backup.tar.gz
+
+<span class="cmt"># Fix permissions</span>
+<span class="cmd">sudo</span> /opt/nessus/sbin/nessuscli fix --reset</code>
+        </div>
+    </section>
+
+    <!-- ===== 14 API ===== -->
+    <section class="section" id="api">
+        <span class="section-number">14 · NESSUS API</span>
+        <h2 class="section-title">
+            <span class="icon">🔌</span>
+            Nessus REST API
+        </h2>
+        <p>
+            Nessus ships with a comprehensive <strong>REST API</strong> that lets you automate scans, pull results, and integrate with other tools. Perfect for CI/CD pipelines and custom dashboards.
+        </p>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Authenticate (get session token)</span>
+<span class="cmd">curl</span> -k -X POST https://localhost:8834/session \
+  -H <span class="str">"Content-Type: application/json"</span> \
+  -d <span class="str">'{"username":"admin","password":"yourpass"}'</span>
+
+<span class="cmt"># List scans</span>
+<span class="cmd">curl</span> -k -X GET https://localhost:8834/scans \
+  -H <span class="str">"X-Cookie: token=YOUR_TOKEN"</span>
+
+<span class="cmt"># Launch a scan</span>
+<span class="cmd">curl</span> -k -X POST https://localhost:8834/scans/1/launch \
+  -H <span class="str">"X-Cookie: token=YOUR_TOKEN"</span>
+
+<span class="cmt"># Get scan results</span>
+<span class="cmd">curl</span> -k -X GET https://localhost:8834/scans/1 \
+  -H <span class="str">"X-Cookie: token=YOUR_TOKEN"</span>
+
+<span class="cmt"># Export a scan</span>
+<span class="cmd">curl</span> -k -X POST https://localhost:8834/scans/1/export \
+  -H <span class="str">"X-Cookie: token=YOUR_TOKEN"</span> \
+  -d <span class="str">'{"format":"nessus"}'</span></code>
+        </div>
+
+        <div class="callout info">
+            <strong>💡 Note:</strong> The Nessus API uses port <code>8834</code> (HTTPS) and requires authentication via session token. Full docs are available on the Nessus web interface under "API Documentation".
+        </div>
+    </section>
+
+    <!-- ===== 15 BEST ===== -->
+    <section class="section" id="best">
+        <span class="section-number">15 · BEST PRACTICES</span>
+        <h2 class="section-title">
+            <span class="icon">✅</span>
+            Nessus Best Practices
+        </h2>
+        <ol>
+            <li><strong>Always use authenticated scans</strong> when possible — far more accurate.</li>
+            <li><strong>Update plugins weekly</strong> — New vulnerabilities are added daily.</li>
+            <li><strong>Schedule regular scans</strong> — Daily for critical assets, weekly for others.</li>
+            <li><strong>Use scan policies</strong> — Create reusable templates per network segment.</li>
+            <li><strong>Tune false positives</strong> — Mark as "accepted risk" to reduce noise.</li>
+            <li><strong>Enable Safe Checks</strong> — On production networks to avoid disruptions.</li>
+            <li><strong>Throttle on sensitive networks</strong> — Don't hammer fragile systems.</li>
+            <li><strong>Correlate with Metasploit</strong> — Export findings, verify with exploits (in lab).</li>
+            <li><strong>Document remediation</strong> — Track fixes and re-scan to confirm.</li>
+            <li><strong>Use API for automation</strong> — Integrate into CI/CD pipelines.</li>
+        </ol>
+
+        <h3>Scan Scheduling Example</h3>
+        <div class="code-block" data-lang="text">
+<code>Daily Scan Schedule:
+────────────────────────────
+Servers (Critical)   → Daily, 2:00 AM
+Workstations         → Weekly, Saturday 3:00 AM
+Web Apps             → Weekly, Sunday 4:00 AM
+DMZ / Public         → Weekly, Sunday 5:00 AM
+Full Subnet Sweep    → Monthly, 1st of month</code>
+        </div>
+    </section>
+
+    <!-- ===== 16 LEGAL ===== -->
+    <section class="section" id="legal">
+        <span class="section-number">16 · LEGAL &amp; ETHICS</span>
+        <h2 class="section-title">
+            <span class="icon">⚖️</span>
+            Legal &amp; Ethical Boundaries
+        </h2>
+        <div class="callout warn">
+            <strong>⚠️ Critical Warning:</strong> Nessus scans generate significant network traffic and can crash fragile systems. <strong>Never scan systems you don't own or have explicit written permission to test.</strong> Unauthorized scanning is a crime in many jurisdictions.
+        </div>
+
+        <h3>Before You Scan</h3>
+        <ul>
+            <li><strong>Get written authorization</strong> — Signed scope document.</li>
+            <li><strong>Define the target range</strong> — Only scan approved IPs.</li>
+            <li><strong>Agree on timing</strong> — Off-hours to avoid disruption.</li>
+            <li><strong>Warn the SOC/IT team</strong> — So they don't panic.</li>
+            <li><strong>Have a rollback plan</strong> — In case something breaks.</li>
+        </ul>
+
+        <h3>Legal Practice Environments</h3>
+        <div class="use-grid">
+            <div class="use-card">
+                <span class="use-icon">🎯</span>
+                <h4>HackTheBox</h4>
+                <p>Scan and exploit vulnerable machines legally.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">💀</span>
+                <h4>VulnHub</h4>
+                <p>Download vulnerable VMs and scan them at home.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🧪</span>
+                <h4>TryHackMe</h4>
+                <p>Guided rooms with Nessus scanning exercises.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🐐</span>
+                <h4>Metasploitable</h4>
+                <p>Deliberately vulnerable VM — perfect for Nessus practice.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">🏠</span>
+                <h4>Your Own Lab</h4>
+                <p>Scan your own home network — always legal.</p>
+            </div>
+            <div class="use-card">
+                <span class="use-icon">☁️</span>
+                <h4>Cloud VMs</h4>
+                <p>Spin up your own AWS/Azure VMs to scan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 17 CONCLUSION ===== -->
+    <section class="section" id="conclusion">
+        <span class="section-number">17 · CONCLUSION</span>
+        <h2 class="section-title">
+            <span class="icon">🎓</span>
+            Final Thoughts
+        </h2>
+        <p>
+            <strong>Nessus</strong> is the <strong>gold-standard vulnerability scanner</strong> in cybersecurity. Every professional pentester, security analyst, and compliance auditor has used it. It's fast, accurate, and covers more vulnerabilities than any other tool.
+        </p>
+        <p>
+            For ethical hackers, Nessus is a <strong>force multiplier</strong>. It finds the easy stuff — missing patches, weak configs, default creds — so you can focus your time on exploitation, logic flaws, and creative attacks. Combined with Metasploit and Burp Suite, it forms the core toolkit of modern pentesting.
+        </p>
+        <p>
+            The learning journey:
+        </p>
+        <ol>
+            <li><strong>Install Nessus Essentials</strong> — Free forever for 16 IPs.</li>
+            <li><strong>Scan your own lab</strong> — Start with Metasploitable or DVWA.</li>
+            <li><strong>Learn to read results</strong> — Prioritize by severity and exploitability.</li>
+            <li><strong>Practice authenticated scans</strong> — This is where the real value is.</li>
+            <li><strong>Automate with the API</strong> — Integrate with your workflow.</li>
+            <li><strong>Get certified</strong> — Tenable offers free training on Nessus.</li>
+        </ol>
+        <div class="callout">
+            <strong>🚀 Next Steps:</strong> Install Nessus Essentials today, spin up a Metasploitable VM, and run your first scan. Read every finding. Then use Metasploit to verify them. Within weeks, you'll be a vulnerability assessment pro.
+        </div>
+        <p style="text-align:center; margin-top: 30px; font-size: 17px; color: #00ff88; font-weight: 600;">
+            Happy hacking — ethically. 🔧
+        </p>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="page-footer">
+        <p>© 2025 · <span class="brand">⚡ cyber·sume</span> · Nessus Tools</p>
+        <p style="margin-top: 8px; font-size: 12px;">Complete Guide · Beginner to Advanced · Updated 2025</p>
+    </footer>
 
 </div>
+
+</body>
+</html>
